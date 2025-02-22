@@ -24,7 +24,7 @@
     "imagenes": ["media/proyectos/salonbelleza-inicio.png","media/proyectos/salonbelleza-contacto.png","media/proyectos/salonbelleza-google.png"] },
 
   { "id": 5, "nombre": "NotFlix",
-    "descripcion": "Este es un proyecto de ejemplo.",
+    "descripcion": "Este proyecto no es un Netflix, por eso el nombre, fue inicialmente creado para probar docker y dar una solucion a mi familia para ver peliculas en streaming dentro de la red de casa. Instalé un servidor, cree los contenedores de docker y subi la página con un http-server. Reproduce por el momento videos .mp4, suficiente para ver peliculas o videos que teniamos por casa, de manera sencilla a través de los smartTV's",
     "tecnologias": ["HTML", "CSS", "JavaScript", "NodeJs", "Docker"],
     "url": "https://github.com/TilaCl/NotFlix", "fecha": "2025-01-01",
     "imagenes": ["media/proyectos/notflix-dark.png","media/proyectos/notflix-white.png"] },
