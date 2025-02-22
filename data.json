@@ -1,0 +1,45 @@
+[
+  { "id": 1, "nombre": "ReadCycle",
+    "descripcion": "ReadCycle es un marketplace pensado para conectar a lectores que desean vender, intercambiar o comprar libros de segunda mano. Conectamos a las personas directamente a través de WhatsApp o correo electrónico, haciendo el proceso simple y sin complicaciones. 🌟",
+    "tecnologias": ["Ionic", "Angular", "Firebase"],
+    "url": "https://readcycle-ten.vercel.app/", "fecha": "2024-08-15",
+    "imagenes": ["media/proyectos/readcycle-login.png","media/proyectos/readcycle-main.png","media/proyectos/readcycle-profile.png"] },
+
+  { "id": 2, "nombre": "Satelite-Terra v1",
+    "descripcion": "Este proyecto consiste en un sistema de monitoreo ambiental que utiliza sensores para recolectar datos como temperatura, humedad, humedad del suelo y radiación UV. Los datos son enviados a una base de datos MySQL a través de un servidor Node.js, y pueden ser visualizados en una interfaz web.",
+    "tecnologias": ["MySQL","NodeJs","C++","Docker", "Arduino IDE", "Power BI"],
+    "url": "https://github.com/TilaCl/Satelite-Terra", "fecha": "2025-01-10",
+    "imagenes": ["media/proyectos/satelite-mace.png","media/proyectos/satelite-diy.png","media/proyectos/satelite-plant.png"] },
+
+  { "id": 3, "nombre": "Portal Gerencias",
+    "descripcion": "Portal para visualización y seguimiento de proyectos.",
+    "tecnologias": ["Angular", "MySQL", "NodeJs", "CloudFlare","Boostrap"],
+    "url": "https://portalgrc.inevada.cl/login", "fecha": "2024-09-30",
+    "imagenes": ["media/proyectos/portal-inicio.png","media/proyectos/portal-proyecto.png","media/proyectos/portal-tareas.png"] },
+
+  { "id": 4, "nombre": "SEO - Alma Estética Salón",
+    "descripcion": "El salón de belleza Alma Estética Salón necesitaba atraer más clientes a través de una página web y mejorar su posicionamiento en Google Search y Google Maps. Para ello, se elaboró un acta de constitución del proyecto, definiendo alcances, plazos y métricas clave. La página web fue desarrollada en Google Sites con un diseño minimalista, colores pastel y una estructura clara que destaca los servicios ofrecidos y los medios de contacto. Además, se registró el negocio en Google Maps y se optimizó su visibilidad en las búsquedas locales de Padre Hurtado y sus alrededores. Como resultado, las reservas de horas aumentaron en un 40% durante el primer mes.",
+    "tecnologias": ["Google Ads", "Google Sites"],
+    "url": "https://sites.google.com/view/almaesteticasalon/inicio", "fecha": "2024-06-01",
+    "imagenes": ["media/proyectos/salonbelleza-inicio.png","media/proyectos/salonbelleza-contacto.png","media/proyectos/salonbelleza-google.png"] },
+
+  { "id": 5, "nombre": "NotFlix",
+    "descripcion": "Este es un proyecto de ejemplo.",
+    "tecnologias": ["HTML", "CSS", "JavaScript", "NodeJs", "Docker"],
+    "url": "https://github.com/TilaCl/NotFlix", "fecha": "2025-01-01",
+    "imagenes": ["media/proyectos/notflix-dark.png","media/proyectos/notflix-white.png"] },
+
+  { "id": 6, "nombre": "Sensor temperatura",
+    "descripcion": "Se desarrolló un sistema de monitoreo de temperatura utilizando un ESP32 y un sensor DHT22, integrado con un bot de Telegram para enviar alertas en tiempo real. Este sistema fue implementado en los servidores de la empresa con el objetivo de detectar aumentos de temperatura y prevenir daños por sobrecalentamiento. Un mes después de su implementación, el dispositivo alertó sobre un alza inusual en la temperatura de la sala de servidores. La notificación permitió apagar los equipos a tiempo, evitando posibles fallas. Posteriormente, se descubrió que el edificio de 21 pisos estaba realizando mantenimiento en el sistema de aire acondicionado sin previo aviso. Gracias a la alerta, otras empresas en el edificio también pudieron tomar medidas preventivas con sus servidores, mitigando el riesgo de daños por sobrecalentamiento.",
+    "tecnologias": ["C++", "Telegram API", "Arduino IDE"],
+    "url": "https://github.com/TilaCl/DHT22-Esp32-bot", "fecha": "2024-10-01",
+    "imagenes": ["media/proyectos/sensor-dht22-diagram.png","media/proyectos/sensor-dht22-chat.png"] },
+
+  { "id": 7, "nombre": "Tienda mascotas - Frontend",
+    "descripcion": "Tienda de productos para mascotas, uno de mis primeros proyectos web, desarrollado en clase junto a mis compañeros Romina Poblete y Felipe Valenzuela. Se trata de un proyecto Front-End responsivo, creado con la intención de integrarle un Backend en Django en futuras etapas.",
+    "tecnologias": ["HTML", "CSS", "JavaScript"],
+    "url": "https://github.com/Felipee2/Experiencia1_Poblete_Diaz_Valenzuela_007D", "fecha": "2022-08-01",
+    "imagenes": ["media/proyectos/mascotitas-inicio.png","media/proyectos/mascotitas-comprar.png","media/proyectos/mascotitas-about.png"] }
+
+
+]

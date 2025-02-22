@@ -1,0 +1,349 @@
+/* Estilos generales */
+body {
+    background-color: #EFFAFD; /* Azul pálido */
+    color: #333; /* Color de texto oscuro para modo claro */
+    font-family: 'Roboto Mono', monospace; /* Fuente tecnológica y moderna */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #EFFAFD; /* Azul pálido */
+    color: #333; /* Color de texto oscuro para modo claro */
+}
+
+body.dark-mode {
+    background-color: #112240; /* Azul marino oscuro */
+    color: #EFFAFD; /* Color de texto claro para modo oscuro */
+}
+
+/* Switch para modo claro/oscuro */
+.theme-switch-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4A8BDF; /* Azul real */
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "🌙";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+}
+
+input:checked + .slider {
+    background-color: #A0006D; /* Berenjena */
+}
+
+input:checked + .slider:before {
+    content: "☀️";
+    transform: translateX(26px);
+}
+
+/* Estilos para la biografía */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid transparent;
+    background: linear-gradient(45deg, #4A8BDF, #A0006D); /* Azul real y Berenjena */
+    background-origin: border-box;
+    box-shadow: 0 0 10px rgba(74, 139, 223, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.profile-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4A8BDF; /* Azul real */
+    margin-bottom: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(30, end);
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.profile-bio {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333; /* Color de texto oscuro para modo claro */
+    margin-bottom: 2rem;
+}
+
+body.dark-mode .profile-bio {
+    color: #EFFAFD; /* Color de texto claro para modo oscuro */
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Estilos para los contenedores dinámicos */
+.dynamic-item {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #EFFAFD; /* Azul pálido */
+    padding: 20px;
+    text-align: left;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body.dark-mode .dynamic-item {
+    background-color: #112240; /* Azul marino oscuro */
+    color: #EFFAFD; /* Color de texto claro para modo oscuro */
+}
+
+.dynamic-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dynamic-item h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #4A8BDF; /* Azul real */
+}
+
+body.dark-mode .dynamic-item h3 {
+    color: #A0006D; /* Berenjena */
+}
+
+.dynamic-item p {
+    margin: 10px 0;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333; /* Color de texto oscuro para modo claro */
+}
+
+body.dark-mode .dynamic-item p {
+    color: #EFFAFD; /* Color de texto claro para modo oscuro */
+}
+
+.dynamic-item .technologies {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.dynamic-item .technologies span {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    color: white;
+    background-color: #4A8BDF; /* Azul real */
+}
+
+body.dark-mode .dynamic-item .technologies span {
+    background-color: #A0006D; /* Berenjena */
+}
+
+.dynamic-item img {
+    max-width: 100%;
+    max-height: 150px;
+    min-height: 150px;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la modal */
+.modal-content {
+    background-color: #EFFAFD; /* Azul pálido */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+}
+
+body.dark-mode .modal-content {
+    background-color: #112240; /* Azul marino oscuro */
+    color: #EFFAFD; /* Color de texto claro para modo oscuro */
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-header h5 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #4A8BDF; /* Azul real */
+}
+
+body.dark-mode .modal-header h5 {
+    color: #A0006D; /* Berenjena */
+}
+
+.modal-body {
+    text-align: left;
+}
+
+.modal-body p {
+    margin: 10px 0;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333; /* Color de texto oscuro para modo claro */
+}
+
+body.dark-mode .modal-body p {
+    color: #EFFAFD; /* Color de texto claro para modo oscuro */
+}
+
+.modal-body .technologies {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.modal-body .technologies span {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    color: white;
+    background-color: #4A8BDF; /* Azul real */
+}
+
+body.dark-mode .modal-body .technologies span {
+    background-color: #A0006D; /* Berenjena */
+}
+
+.carousel {
+    margin-top: 20px;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 70vh;
+    min-width: 200px;
+    min-height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    backdrop-filter: blur(5px);
+}
+
+/* Footer */
+.footer {
+    background-color: #112240; /* Azul marino oscuro */
+    color: #EFFAFD; /* Color de texto claro para modo oscuro */
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+body.light-mode .footer {
+    background-color: #EFFAFD; /* Azul pálido */
+    color: #333; /* Color de texto oscuro para modo claro */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dynamic-item {
+        height: 350px;
+    }
+
+    .carousel-item img {
+        max-height: 50vh;
+    }
+
+    .profile-name {
+        font-size: 2rem;
+    }
+
+    .profile-bio {
+        font-size: 1rem;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
