@@ -1,3 +1,12 @@
+
+.modal-body a {
+    word-break: break-all; /* Esto hará que la URL se rompa en varias líneas si es demasiado larga */
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 /* Estilos generales */
 body {
     background-color: #EFFAFD; /* Azul pálido */
@@ -153,6 +162,14 @@ body.dark-mode .profile-bio {
 body.dark-mode .dynamic-item {
     background-color: #112240; /* Azul marino oscuro */
     color: #EFFAFD; /* Color de texto claro para modo oscuro */
+}
+
+body.dark-mode .dynamic-item p.text-muted {
+    color: #EFFAFD !important; /* Color de texto claro para modo oscuro */
+}
+
+body.dark-mode .modal-body p.text-muted {
+    color: #EFFAFD !important; /* Color de texto claro para modo oscuro */
 }
 
 .dynamic-item:hover {

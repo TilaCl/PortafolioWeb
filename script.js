@@ -42,7 +42,7 @@ modalTechnologies.className = 'technologies mb-3';
 
 let technologyColors = {};
 let allProjects = [];
-let visibleProjects = 5;
+let visibleProjects = 6;
 
 // Cargar los colores de las tecnologías desde software.json
 fetch('software.json')
@@ -83,7 +83,6 @@ function createItem(item) {
     return col;
 }
 
-// Función para abrir el modal con los detalles del proyecto
 function openModal(item) {
     modalTitle.textContent = item.nombre;
     modalDescription.textContent = item.descripcion;
@@ -114,7 +113,6 @@ function openModal(item) {
     projectModal.show();
 }
 
-// Función para formatear fechas
 function formatDate(dateString, format) {
     const date = new Date(dateString);
     const day = String(date.getDate()).padStart(2, '0');
@@ -126,8 +124,6 @@ function formatDate(dateString, format) {
         .replace('MM', month)
         .replace('yyyy', year);
 }
-
-// Función para renderizar los proyectos
 function renderItems(data) {
     container.innerHTML = '';
     const projectsToShow = data.slice(0, visibleProjects);
@@ -141,14 +137,13 @@ function renderItems(data) {
         document.getElementById('show-more').style.display = 'none';
     }
 
-    if (visibleProjects > 5) {
+    if (visibleProjects > 6) {
         document.getElementById('show-less').style.display = 'inline-block';
     } else {
         document.getElementById('show-less').style.display = 'none';
     }
 }
 
-// Cargar los proyectos desde data.json
 fetch('data.json')
     .then(response => response.json())
     .then(data => {
@@ -167,6 +162,6 @@ document.getElementById('show-more').addEventListener('click', () => {
 
 // Botón para mostrar menos proyectos
 document.getElementById('show-less').addEventListener('click', () => {
-    visibleProjects = 5;
+    visibleProjects = 6;
     renderItems(allProjects);
 });
